@@ -43,7 +43,7 @@ Set your key in `.env`:
 TEAMIFIED_OPENAI_API_KEY=sk-...
 ```
 
-When set, both embeddings (`text-embedding-3-small`) and chat (`gpt-4o-mini`) switch to OpenAI automatically. Faster response times and higher-quality answers compared to most local models.
+When set, both embeddings (`text-embedding-3-small`) and chat (`gpt-4o-mini`) switch to OpenAI automatically. `gpt-4o-mini` offers the best balance of cost and quality for RAG workloads — fast, cheap, and strong at grounded Q&A.
 
 **Local (free, no API key)**
 
