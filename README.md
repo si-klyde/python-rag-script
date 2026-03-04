@@ -13,12 +13,24 @@ Supports both fully local (Ollama + sentence-transformers) and cloud (OpenAI) mo
 
 ### Install
 
+**Linux / macOS**
+
 ```bash
 git clone <repo-url> && cd python-rag-script
 python -m venv venv
 source venv/bin/activate  # fish: source venv/bin/activate.fish
 pip install -r requirements.txt
 cp .env.example .env
+```
+
+**Windows (PowerShell)**
+
+```powershell
+git clone <repo-url>; cd python-rag-script
+python -m venv venv
+venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+copy .env.example .env
 ```
 
 ### Choose a Provider
