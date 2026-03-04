@@ -66,38 +66,16 @@ To use a different PDF, set `PDF_PATH` in `.env`.
 
 ### Sample Queries
 
-**Factual**
-
 ```
 When did the EDSA People Power Revolution happen?
 Who is Jose Rizal and why is he important?
 Tell me about the Spanish colonization of the Philippines.
-```
-
-**Broad / open-ended**
-
-```
 Give me a summary of Filipino history.
 What were the major turning points in Philippine history from colonization to independence?
-```
-
-**Analytical**
-
-```
 What were the causes and lasting effects of the Philippine-American War?
 How did Spanish colonization shape Philippine culture, religion, and governance?
-```
-
-**Comparative**
-
-```
 What are the differences between EDSA I and EDSA II?
 Compare the goals of the Propaganda Movement and the Katipunan.
-```
-
-**Timeline**
-
-```
 What were the events leading up to the EDSA II revolution?
 Trace the timeline of Philippine independence from Spain through the American period.
 ```
