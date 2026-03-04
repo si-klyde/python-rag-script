@@ -3,6 +3,7 @@ __pycache__/
 *.pyc
 .env
 *.pdf
+!philippine_history.pdf
 .claude/
 *.egg-info/
 dist/
