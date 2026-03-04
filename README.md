@@ -35,9 +35,19 @@ copy .env.example .env
 
 ### Choose a Provider
 
-**Local (default, free, no API key)**
+**OpenAI (recommended for speed and quality)**
 
-Uses `sentence-transformers/all-MiniLM-L6-v2` for embeddings and Ollama for chat.
+Set your key in `.env`:
+
+```
+TEAMIFIED_OPENAI_API_KEY=sk-...
+```
+
+When set, both embeddings (`text-embedding-3-small`) and chat (`gpt-4o-mini`) switch to OpenAI automatically. Faster response times and higher-quality answers compared to most local models.
+
+**Local (free, no API key)**
+
+Uses `sentence-transformers/all-MiniLM-L6-v2` for embeddings and Ollama for chat. Requires downloading a model and runs on your hardware, so speed depends on your machine.
 
 ```bash
 ollama pull qwen3:8b   # or any model you prefer
@@ -49,16 +59,6 @@ Change the Ollama model via env:
 ```bash
 OLLAMA_MODEL=llama3:8b
 ```
-
-**OpenAI (API key required)**
-
-Set your key in `.env`:
-
-```
-TEAMIFIED_OPENAI_API_KEY=sk-...
-```
-
-When set, both embeddings (`text-embedding-3-small`) and chat (`gpt-4o-mini`) switch to OpenAI automatically.
 
 ## Usage
 
