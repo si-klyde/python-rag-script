@@ -50,56 +50,56 @@ When set, both embeddings (`text-embedding-3-small`) and chat (`gpt-4o-mini`) sw
 
 ## Usage
 
-Place `philippine_history.pdf` in the project root (or set `PDF_PATH` in `.env`), then:
+```bash
+python run.py
+```
+
+This starts interactive mode — the PDF is loaded and indexed once, then you enter queries in a loop. You can also pass a single query as an argument:
 
 ```bash
-# interactive mode — loads PDF once, loop queries until you quit
-python run.py
-
-# single query — runs once and exits
 python run.py "When did the EDSA People Power Revolution happen?"
 ```
 
 Type `quit`, `exit`, empty enter, or Ctrl+C / Ctrl+D to exit interactive mode.
 
+To use a different PDF, set `PDF_PATH` in `.env`.
+
 ### Sample Queries
 
-Try these to exercise different pipeline features:
+**Factual**
 
-**Simple factual** (direct retrieval, no decomposition)
-
-```bash
-python run.py "When did the EDSA People Power Revolution happen?"
-python run.py "Who is Jose Rizal and why is he important?"
-python run.py "Tell me about the Spanish colonization of the Philippines."
+```
+When did the EDSA People Power Revolution happen?
+Who is Jose Rizal and why is he important?
+Tell me about the Spanish colonization of the Philippines.
 ```
 
-**Broad / open-ended** (triggers query decomposition into sub-questions)
+**Broad / open-ended**
 
-```bash
-python run.py "Give me a summary of Filipino history."
-python run.py "What were the major turning points in Philippine history from colonization to independence?"
+```
+Give me a summary of Filipino history.
+What were the major turning points in Philippine history from colonization to independence?
 ```
 
-**Analytical** (decomposition + analytical intent)
+**Analytical**
 
-```bash
-python run.py "What were the causes and lasting effects of the Philippine-American War?"
-python run.py "How did Spanish colonization shape Philippine culture, religion, and governance?"
+```
+What were the causes and lasting effects of the Philippine-American War?
+How did Spanish colonization shape Philippine culture, religion, and governance?
 ```
 
-**Comparative** (decomposition + comparative intent)
+**Comparative**
 
-```bash
-python run.py "What are the differences between EDSA I and EDSA II?"
-python run.py "Compare the goals of the Propaganda Movement and the Katipunan."
+```
+What are the differences between EDSA I and EDSA II?
+Compare the goals of the Propaganda Movement and the Katipunan.
 ```
 
-**Timeline** (decomposition + chronological intent)
+**Timeline**
 
-```bash
-python run.py "What were the events leading up to the EDSA II revolution?"
-python run.py "Trace the timeline of Philippine independence from Spain through the American period."
+```
+What were the events leading up to the EDSA II revolution?
+Trace the timeline of Philippine independence from Spain through the American period.
 ```
 
 ### Query Decomposition
